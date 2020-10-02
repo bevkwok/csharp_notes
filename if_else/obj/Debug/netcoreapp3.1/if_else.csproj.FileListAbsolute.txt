@@ -1,0 +1,12 @@
+/Users/beverly/Desktop/Learn/Udemy/Udemy_C#/csharp_notes/if_else/bin/Debug/netcoreapp3.1/if_else.deps.json
+/Users/beverly/Desktop/Learn/Udemy/Udemy_C#/csharp_notes/if_else/bin/Debug/netcoreapp3.1/if_else.runtimeconfig.json
+/Users/beverly/Desktop/Learn/Udemy/Udemy_C#/csharp_notes/if_else/bin/Debug/netcoreapp3.1/if_else.runtimeconfig.dev.json
+/Users/beverly/Desktop/Learn/Udemy/Udemy_C#/csharp_notes/if_else/bin/Debug/netcoreapp3.1/if_else.dll
+/Users/beverly/Desktop/Learn/Udemy/Udemy_C#/csharp_notes/if_else/bin/Debug/netcoreapp3.1/if_else.pdb
+/Users/beverly/Desktop/Learn/Udemy/Udemy_C#/csharp_notes/if_else/obj/Debug/netcoreapp3.1/if_else.csprojAssemblyReference.cache
+/Users/beverly/Desktop/Learn/Udemy/Udemy_C#/csharp_notes/if_else/obj/Debug/netcoreapp3.1/if_else.AssemblyInfoInputs.cache
+/Users/beverly/Desktop/Learn/Udemy/Udemy_C#/csharp_notes/if_else/obj/Debug/netcoreapp3.1/if_else.AssemblyInfo.cs
+/Users/beverly/Desktop/Learn/Udemy/Udemy_C#/csharp_notes/if_else/obj/Debug/netcoreapp3.1/if_else.csproj.CoreCompileInputs.cache
+/Users/beverly/Desktop/Learn/Udemy/Udemy_C#/csharp_notes/if_else/obj/Debug/netcoreapp3.1/if_else.dll
+/Users/beverly/Desktop/Learn/Udemy/Udemy_C#/csharp_notes/if_else/obj/Debug/netcoreapp3.1/if_else.pdb
+/Users/beverly/Desktop/Learn/Udemy/Udemy_C#/csharp_notes/if_else/obj/Debug/netcoreapp3.1/if_else.genruntimeconfig.cache
