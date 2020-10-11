@@ -1,0 +1,14 @@
+.navBar{
+    text-align: center;
+}
+
+#main_title{
+    text-align: center;
+    color: red;
+}
+
+#main_scrollBox{
+    overflow: auto;
+    height: 100%;
+    width: 100%;
+}

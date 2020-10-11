@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    @* '~' refers to wwwroot folder *@
+    <link rel="stylesheet" href="~/css/style.css"/>
+    <title>Home Page</title>
+</head>
+<body>
+    <div class="navBar">
+        <h3>
+            <a href="/">Home</a>
+            <span>|</span>
+            <a href="/projects">Projects</a>
+            <span>|</span>
+            <a href="/projects">Contact</a>
+        </h3>
+    </div>
+    <div class="main">
+        <div id="main_title">
+            About Me
+        </div>
+        <div id="main_body">
+            <div id="main_picture">
+
+            </div>
+            <div id="main_intro">
+                <p>A self driven</p>
+            </div>
+        </div>
+    </div>
+
+                @{
+                DateTime localDate = DateTime.Now;
+                <h1>@localDate.ToString("MMMM dd, yyyy")</h1>
+                <h1>@localDate.ToString("hh:mm tt")</h1>
+            }
+
+</body>
+</html>
