@@ -35,7 +35,7 @@ namespace intro //namespace ProjectName
         }
 
 
-        //Rendering Views 
+        //Rendering Views ------------------------------
         //use type - ViewResult
         [HttpGet("view")]
         public ViewResult index()
@@ -50,6 +50,99 @@ namespace intro //namespace ProjectName
 
             // ViewResult myView = View();
             // return myView;
+        }
+
+        //Redirecting ------------------------------
+        //Method - RedirectToAction
+        //Type - RedirectToActionResult
+        public RedirectToActionResult Method()
+        {
+            return RedirectToAction("Other");
+        }
+
+        public ViewResult Other()
+        {
+            return View();
+        }
+
+        //Redicecting and passing argument ----------
+        public RedirectToActionResult TheMethod()
+        {
+            return RedirectToAction("OtherMethod", new {Food = "chicken", Flavor = "salty"});
+        }
+        
+        [HttpGet]
+        [Route("other/{Food}/{Flavor}")]
+        public ViewResult OtherMethod(string Food, string Flavor)
+        {
+            System.Console.WriteLine($"I ate {Flavor} {Food}");
+
+            return View();
+        }
+
+
+        // Another example of redirecting and passing argument ----------
+        [HttpGet("example2")]
+        public RedirectToActionResult Example2()
+        {
+            System.Console.WriteLine("Redirecting...");
+            var param = new {username="Devon", ResponseCacheLocation="Seattle"};
+            return RedirectToAction("HelloUser", param); 
+            //will be directed to the action called HelloUser
+        }
+
+
+        //IActionResult ---------------------------------
+        //it implemetns all possible action results
+        //not limited to one type of return
+        [HttpGet("iaction")]
+        public IActionResult Example3(string something)
+        {
+            if(something == "redirect")
+            {
+                return RedirectToAction("Index");
+            }
+            else
+            {
+                return Json(new {Something = something});
+            }
+        }
+
+
+        //UseInterface as a return type
+        public interface IMovable
+        {
+            void Move();
+        }
+
+        // one class called person : IMovable
+        // one other class called Car : IMovable
+
+        public IMovable GetMovable() // IActionResult is also usiable
+        {
+            if(isPerson)
+            {
+                return new Person();
+            }
+            return new Car();
+        }
+
+        
+        //ViewBag
+        //a way to send data from controllers to views
+        //is a dictionary, persists over one view return
+        [HttpGet("viewBag")]
+        public IActionResult VBExample()
+        {
+            ViewBag.Example = "Hello World";
+            return View();
+            //then move to VBExample.cshtml
+            //<p>@ViewBag.Example</p>
+            //Or
+            // @{
+            //     string VBSentence = ViewBag.Example + "Hi!";
+            // }
+            // <p>@VBSentence</p>
         }
 
     }
