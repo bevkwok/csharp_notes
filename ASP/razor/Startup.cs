@@ -8,7 +8,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 
-namespace intro
+namespace razor
 {
     public class Startup
     {
@@ -26,7 +26,7 @@ namespace intro
             {
                 app.UseDeveloperExceptionPage();
             }
-            app.UseStaticFiles(); //for css, js and imgs
+
             app.UseMvc();
             app.UseRouting();
 
@@ -38,6 +38,5 @@ namespace intro
                 });
             });
         }
-
     }
 }
