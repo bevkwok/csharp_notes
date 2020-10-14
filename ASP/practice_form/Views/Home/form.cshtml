@@ -1,3 +1,14 @@
+@* second way to pass data
+- first using the models which has the user class from (User.cs) 
+- then pass in the class name (User) *lower case
+*@
+@using practice_form.Models 
+@model User
+@* @model practice_form.Models.User   << also work *@
+
+@* If want to pass on a list of User *@
+@* Make the list in Controller first *@
+@* @model List<User> *@
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,11 +17,27 @@
     <title>Form Result</title>
 </head>
 <body>
+    @* first way to pass data *@
     @{
     <div>
         <p>Name: @ViewBag.Name</p>
         <p>Email: @ViewBag.email</p>
     </div>
+    }
+
+    @* second way to pass data *@
+    <div>
+        <p>Name: @Model.Name</p>
+        <p>Email: @Model.Email</p>
+    </div>
+
+    @* Passing a list of User *@
+    @foreach (var user in Model)
+    {
+        <div>
+            <p>Name: @user.Name</p>
+            <p>Email: @user.Email</p>
+        </div>
     }
 </body>
 </html>
