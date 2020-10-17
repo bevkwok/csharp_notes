@@ -1,0 +1,50 @@
+@model Candy
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit </title>
+</head>
+<body>
+    <div>
+        <form asp-action="AddCandy" asp-controller="Home" method="POST">
+            <div>
+                <div>
+                    <span asp-validation-for="Name"></span>
+                    <label asp-for="Name"></label>
+                    <input asp-for="Name" type="text" value="@ViewBag.TheCandy.Name">
+                </div>
+                <div>
+                    <span asp-validation-for="Calories"></span>
+                    <label asp-for="Calories"></label>
+                    <input asp-for="Calories" type="text" value="@ViewBag.TheCandy.Calories">
+                </div>
+            </div>
+            <div>
+                <div>
+                    <span asp-validation-for="Sweetness"></span>
+                    <label asp-for="Sweetness"></label>
+                    <select asp-for="Sweetness">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
+                </div>
+            </div>
+            <div>
+                <div>
+                    <span asp-validation-for="Description"></span>
+                    <label asp-for="Description"></label>
+                    <input asp-for="Description" type="text">
+                </div>
+                <div>
+                    <input type="submit">
+                </div>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
