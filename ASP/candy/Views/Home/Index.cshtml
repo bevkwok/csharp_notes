@@ -1,0 +1,25 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CanDelicious</title>
+</head>
+<body>
+    <div>
+        <h1>Welcome to CanDelicious</h1>
+    </div>
+    <div>
+        <h3>Check out some candies!</h3>
+        <a href="new">Add a Candy</a>
+    </div>
+    <div>
+        @{
+                foreach(var candy in ViewBag.AllCandies)
+                {
+                    <a href="@candy.CandyId">@candy.Name</a>
+                }
+        }
+    </div>
+</body>
+</html>
